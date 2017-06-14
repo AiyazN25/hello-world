@@ -1,0 +1,14 @@
+Paste this into Chrome Console for alternating 1s background blue to white:
+
+var body = document.querySelector("body");
+var isBlue = false;
+
+setInterval(function(){
+	if(isBlue) {
+		body.style.background = "white";
+	}
+	else {
+		body.style.background = "blue";
+	}
+	isBlue = !isBlue;
+}, 1000);
